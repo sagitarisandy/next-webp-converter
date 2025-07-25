@@ -69,11 +69,3 @@ export async function POST(request: NextRequest) {
         return NextResponse.json({ error: "Failed to convert images" }, { status: 500 });
     }
 }
-
-export const config = {
-  api: {
-    bodyParser: {
-      sizeLimit: '50mb', // adjust as needed
-    },
-  },
-};
