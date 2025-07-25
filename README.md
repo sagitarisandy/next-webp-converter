@@ -1,36 +1,72 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Elevate Designs | Image Converter
+
+Convert your images to WebP format easily with a beautiful, modern UI. Supports batch upload (up to 10 images), instant conversion, and download as individual files or a zip archive.
+
+## Features
+
+- Upload up to 10 images (PNG, JPG, JPEG)
+- Drag & drop or browse files
+- Preview selected files before conversion
+- Convert all images to WebP format
+- Download converted images individually or as a zip
+- Responsive design for desktop and mobile
+- Fast conversion powered by [Sharp](https://github.com/lovell/sharp)
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js >= 18
+- npm or yarn
+
+### Installation
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Development
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+nvm use 20.7.0 # recommended
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Build for Production
 
-## Learn More
+```bash
+npm run build
+npm start
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Folder Structure
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+├── public/
+│   └── elevate-designs-logo.svg
+├── src/
+│   └── app/
+│       ├── page.tsx
+│       └── api/
+│           ├── convert/route.ts
+│           └── convert-single/route.ts
+├── .gitignore
+├── package.json
+├── README.md
+└── ...
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## API Endpoints
 
-## Deploy on Vercel
+- `POST /api/convert` — Convert multiple images, returns WebP or zip
+- `POST /api/convert-single` — Convert a single image, returns WebP
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Credits
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- UI by Elevate Designs
+- Conversion by [Sharp](https://github.com/lovell/sharp)
+- Zip creation by [JSZip](https://stuk.github.io/jszip/)
+
+## License
+
+MIT
