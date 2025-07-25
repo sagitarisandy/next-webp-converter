@@ -1,15 +1,7 @@
 {
   "functions": {
-    "src/app/api/convert/route.ts": {
+    "src/app/api/*/route.ts": {
       "maxDuration": 30
-    },
-    "src/app/api/convert-single/route.ts": {
-      "maxDuration": 30
-    }
-  },
-  "api": {
-    "bodyParser": {
-      "sizeLimit": "50mb"
     }
   }
 }
