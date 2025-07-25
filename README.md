@@ -39,6 +39,20 @@ npm run build
 npm start
 ```
 
+### Deploy to Vercel
+
+```bash
+# Install Vercel CLI
+npm i -g vercel
+
+# Deploy
+vercel
+```
+
+## Configuration
+
+The project includes `vercel.json` for optimal deployment on Vercel platform with proper timeout and body size limits.
+
 ## Folder Structure
 
 ```

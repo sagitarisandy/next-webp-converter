@@ -4,10 +4,8 @@ const nextConfig: NextConfig = {
   experimental: {
     serverComponentsExternalPackages: ["sharp"],
   },
-  api: {
-    bodyParser: {
-      sizeLimit: '50mb',
-    },
+  images: {
+    formats: ['image/webp', 'image/avif'],
   },
 };
 
